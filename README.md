@@ -26,12 +26,11 @@ This repository is organized for modular experimentation — from raw image proc
 ---
 
 ## 📁 Folder Overview
-
+The pipeline follows the following folder structure and creates the **processed** and **output** folders. Due to data limit constraints only the "raw_input" folder is uploaded which holds the input data. 
 ```text
 Root Directory 
 ├── raw_input/                  	# Original input images (ARW or JPG)
-│   ├── linear-gradient-patterns/
-│   └── rgb-gradient-patterns/  	# (Unused)
+│   └── linear-gradient-patterns/
 │
 ├── processed/                  	# Intermediate processing results
 │   ├── preview_8bit/           	# Viewable preview of processed TIFFs
@@ -64,10 +63,10 @@ pip install numpy opencv-python matplotlib pillow tqdm moviepy plyfile
 ### Main Files:
 
 ```text
-- preprocessing.py 				# If processing of RAW data is necessary then start with data processing part.
-- photometric_stereo.py 			# Normal and Albedo maps are generated with processed data (in his case cropped 16 bit tiff files).
-- generate_relight_images.py 			# For relight rendered images both albedo and normal maps are necessary (includes rgb/gray options).
-- animate.py 					# In case normal, albedo (optional: background, mask) available, generating animation can be done from here.
+- preprocessing.py 				            # If processing of RAW data is necessary then start with data processing part.
+- photometric_stereo.py 			        # Normal and Albedo maps are generated with processed data (in his case cropped 16 bit tiff files).
+- generate_relight_images.py 			    # For relight rendered images both albedo and normal maps are necessary (includes rgb/gray options).
+- animate.py 					            # In case normal, albedo (optional: background, mask) available, generating animation can be done from here.
 - animate_standard_diffused_lambertian.py 
 - animate_stylized_quantized_diffuse.py
 - animate_phong_metalic.py
@@ -78,9 +77,9 @@ pip install numpy opencv-python matplotlib pillow tqdm moviepy plyfile
 ## Helper Files:
 
 ```text
-- generate_albedos.py 				# Creates custom albedo (currently generates 3 types). 
-- mp4_to_gif.py 				# To convert mp4 to gif format.
-- extract_gif_frames.py 			# To extract gif frames, preview and save.
+- generate_albedos.py 				        # Creates custom albedo (currently generates 3 types). 
+- mp4_to_gif.py 				            # To convert mp4 to gif format.
+- extract_gif_frames.py 			        # To extract gif frames, preview and save.
 ```
 
 ## For Debugging and Analysis:
